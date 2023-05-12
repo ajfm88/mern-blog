@@ -25,7 +25,7 @@ const CTA = () => {
         <div className='container grid grid-cols-12 mx-auto py-10 md:pb-20 lg:place-items-center'>
           <div className='col-span-12 lg:col-span-6'>
             <h2 className='text-white font-roboto font-bold text-2xl md:text-4xl md:text-center md:leading-normal lg:text-left'>
-              Get our stories delivered from us to your inbox weekly.
+              Get our stories delivered From us to your inbox weekly.
             </h2>
             <div className='w-full max-w-[494px] mt-12 space-y-3 mx-auto md:space-y-0 md:flex md:items-center md:space-x-2 lg:mx-0'>
               <input
@@ -41,8 +41,8 @@ const CTA = () => {
               <span className='font-bold italic text-[#B3BAC5] md:not-italic md:font-normal md:text-dark-light'>
                 Get a response tomorrow
               </span>{' '}
-              if you submit it by 9pm today. If we received it after 9pm, you
-              will get a response the following day.
+              if you submit by 9pm today. If we received after 9pm will get a
+              reponse the following day.
             </p>
           </div>
           <div className='col-span-12 hidden mb-[70px] md:block md:order-first lg:col-span-6 lg:order-last'>
@@ -60,8 +60,7 @@ const CTA = () => {
                     Future of Work
                   </h2>
                   <p className='text-dark-light mt-3 text-sm md:text-lg'>
-                    The majority of people will work in jobs that don’t exist
-                    today.
+                    Majority of peole will work in jobs that don’t exist today.
                   </p>
                 </div>
               </div>
