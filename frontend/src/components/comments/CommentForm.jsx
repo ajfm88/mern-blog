@@ -5,6 +5,7 @@ const CommentForm = ({
   formSubmitHanlder,
   formCancelHandler = null,
   initialText = '',
+  loading = false,
 }) => {
   const [value, setValue] = useState(initialText);
 
@@ -20,7 +21,7 @@ const CommentForm = ({
         <textarea
           className='w-full focus:outline-none bg-transparent'
           rows='5'
-          placeholder='Leave your comment here...'
+          placeholder='Please leave your comment here...'
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
@@ -34,9 +35,10 @@ const CommentForm = ({
             </button>
           )}
           <button
+            disabled={loading}
             type='submit'
             className='px-6 py-2.5 rounded-lg bg-primary
-         text-white font-semibold'
+         text-white font-semibold disabled:opacity-70 disabled:cursor-not-allowed'
           >
             {btnLabel}
           </button>
