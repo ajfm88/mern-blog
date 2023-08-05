@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
-import Comment from './Comment';
-import CommentForm from './CommentForm';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import Comment from "./Comment";
+import CommentForm from "./CommentForm";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   createNewComment,
   deleteComment,
   updateComment,
-} from '../../services/index/comments';
-import { toast } from 'react-hot-toast';
+} from "../../services/index/comments";
+import { toast } from "react-hot-toast";
 
 const CommentsContainer = ({
   className,
@@ -28,7 +28,7 @@ const CommentsContainer = ({
       },
       onSuccess: () => {
         toast.success(
-          'Your comment was sent successfully, it will become visible after the Admins approve it'
+          "Your comment is sent successfully, it will be visible after the confirmation of the Admin"
         );
       },
       onError: (error) => {
@@ -42,8 +42,8 @@ const CommentsContainer = ({
       return updateComment({ token, desc, commentId });
     },
     onSuccess: () => {
-      toast.success('Your comment was updated successfully');
-      queryClient.invalidateQueries(['blog', postSlug]);
+      toast.success("Your comment is updated successfully");
+      queryClient.invalidateQueries(["blog", postSlug]);
     },
     onError: (error) => {
       toast.error(error.message);
@@ -56,8 +56,8 @@ const CommentsContainer = ({
       return deleteComment({ token, commentId });
     },
     onSuccess: () => {
-      toast.success('Your comment was deleted successfully');
-      queryClient.invalidateQueries(['blog', postSlug]);
+      toast.success("Your comment is deleted successfully");
+      queryClient.invalidateQueries(["blog", postSlug]);
     },
     onError: (error) => {
       toast.error(error.message);
@@ -92,11 +92,11 @@ const CommentsContainer = ({
   return (
     <div className={`${className}`}>
       <CommentForm
-        btnLabel='Send'
+        btnLabel="Send"
         formSubmitHanlder={(value) => addCommentHandler(value)}
         loading={isLoadingNewComment}
       />
-      <div className='space-y-4 mt-8'>
+      <div className="space-y-4 mt-8">
         {comments.map((comment) => (
           <Comment
             key={comment._id}

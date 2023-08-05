@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const createNewComment = async ({
   token,
@@ -15,7 +15,7 @@ export const createNewComment = async ({
     };
 
     const { data } = await axios.post(
-      '/api/comments',
+      "/api/comments",
       {
         desc,
         slug,
