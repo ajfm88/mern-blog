@@ -58,7 +58,7 @@ const deleteComment = async (req, res, next) => {
     }
 
     return res.json({
-      message: 'Comment was deleted successfully',
+      message: 'Comment is deleted successfully',
     });
   } catch (error) {
     next(error);
