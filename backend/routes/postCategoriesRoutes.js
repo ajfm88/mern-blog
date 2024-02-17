@@ -1,20 +1,22 @@
-import express from 'express';
+import express from "express";
 const router = express.Router();
 import {
   createPostCategory,
   deletePostCategory,
   getAllPostCategories,
   updatePostCategory,
-} from '../controllers/postCategoriesController';
-import { adminGuard, authGuard } from '../middleware/authMiddleware';
+  getSingleCategory,
+} from "../controllers/postCategoriesController";
+import { adminGuard, authGuard } from "../middleware/authMiddleware";
 
 router
-  .route('/')
+  .route("/")
   .post(authGuard, adminGuard, createPostCategory)
   .get(getAllPostCategories);
 
 router
-  .route('/:postCategoryId')
+  .route("/:postCategoryId")
+  .get(getSingleCategory)
   .put(authGuard, adminGuard, updatePostCategory)
   .delete(authGuard, adminGuard, deletePostCategory);
 

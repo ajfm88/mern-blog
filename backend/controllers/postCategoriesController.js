@@ -1,5 +1,5 @@
-import PostCategories from '../models/PostCategories';
-import Post from '../models/Post';
+import PostCategories from "../models/PostCategories";
+import Post from "../models/Post";
 
 const createPostCategory = async (req, res, next) => {
   try {
@@ -8,7 +8,7 @@ const createPostCategory = async (req, res, next) => {
     const postCategory = await PostCategories.findOne({ title });
 
     if (postCategory) {
-      const error = new Error('Category is already created!');
+      const error = new Error("Category is already created!");
       return next(error);
     }
 
@@ -19,6 +19,23 @@ const createPostCategory = async (req, res, next) => {
     const savedPostCategory = await newPostCategory.save();
 
     return res.status(201).json(savedPostCategory);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getSingleCategory = async (req, res, next) => {
+  try {
+    const postCategory = await PostCategories.findById(
+      req.params.postCategoryId
+    );
+
+    if (!postCategory) {
+      const error = new Error("Category was not found!");
+      return next(error);
+    }
+
+    return res.json(postCategory);
   } catch (error) {
     next(error);
   }
@@ -59,6 +76,7 @@ const getAllPostCategories = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+};
 
 const updatePostCategory = async (req, res, next) => {
   try {
@@ -75,7 +93,7 @@ const updatePostCategory = async (req, res, next) => {
     );
 
     if (!postCategory) {
-      const error = new Error('Category was not found');
+      const error = new Error("Category was not found");
       return next(error);
     }
 
@@ -97,7 +115,7 @@ const deletePostCategory = async (req, res, next) => {
     await PostCategories.deleteOne({ _id: categoryId });
 
     res.send({
-      message: 'Post category is successfully deleted!',
+      message: "Post category is successfully deleted!",
     });
   } catch (error) {
     next(error);
@@ -109,4 +127,5 @@ export {
   getAllPostCategories,
   updatePostCategory,
   deletePostCategory,
+  getSingleCategory,
 };
