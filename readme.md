@@ -11,6 +11,6 @@
 - ⚛️ React.js for a robust front-end.
 - 🚀 Node.js for server-side JavaScript execution.
 
-#### Original Course
+### Original Course:
 
 - [Blog MERN stack project by Moonfo](https://www.youtube.com/playlist?list=PLhaS1k1mPiCO878vo-9xFJAlUfcz9dMv2)
