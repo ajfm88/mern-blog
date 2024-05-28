@@ -1,15 +1,16 @@
-# Blog App - Full Stack MERN (MongoDB, Express, React, NodeJS) Blog App
+# Blog App - Full Stack MERN Blog App
 
 ## Live Demo:
 
-- [Blog App](https://www.google.com)
+- [Blog App]()
 
 ## Features:
 
-- Uses MongoDB for database and storage. 🗄️
-- Backend built with ExpressJS and NodeJS. 🚀
-- Frontend built in React. ⚛️
+- 🗄️ MongoDB for database and storage.
+- 🛠️ Express.js for building a robust backend and API.
+- ⚛️ React.js for a robust front-end.
+- 🚀 Node.js for server-side JavaScript execution.
 
-#### Original Course
+### Original Course:
 
-- [Blog App MERN stack project by Moonfo](https://www.youtube.com/playlist?list=PLhaS1k1mPiCO878vo-9xFJAlUfcz9dMv2)
+- [Blog MERN stack project by Moonfo](https://www.youtube.com/playlist?list=PLhaS1k1mPiCO878vo-9xFJAlUfcz9dMv2)
