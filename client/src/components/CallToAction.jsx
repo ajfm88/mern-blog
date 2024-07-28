@@ -8,7 +8,7 @@ export default function CallToAction() {
                 This is a sample project of my work.
             </h2>
             <p className='text-gray-500 my-2'>
-                Please feel free to check out more by clicking the link below.
+                My portfolio and personal website is in the link below.
             </p>
             <Button gradientDuoTone='purpleToPink' className='rounded-tl-xl rounded-bl-none'>
                 <a href="https://www.ajfm88.com" target='_blank' rel='noopener noreferrer'>
