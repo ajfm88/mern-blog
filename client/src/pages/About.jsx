@@ -4,11 +4,11 @@ export default function About() {
       <div className='max-w-2xl mx-auto p-3 text-center'>
         <div>
           <h1 className='text-3xl font font-semibold text-center my-7'>
-            About ajfm88’ Blog
+            About ajfm88’s Blog
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Welcome to ajfm88’s Blog! This blog was created by Alejandro Foucault
+              Welcome to ajfm88’s Blog! This blog was created by Alejandro J. Foucault
               as a personal project to share his thoughts and ideas with the
               world. Alejandro is a passionate developer who loves to write about
               technology, coding, and everything in between.
@@ -16,8 +16,8 @@ export default function About() {
 
             <p>
               On this blog, you’ll find weekly articles and tutorials on topics
-              such as web development, software engineering, and programming
-              languages. Alejandro is always learning and exploring new
+              such as Web Development, Software Engineering, and Programming
+              Languages. Alejandro is always learning and exploring new
               technologies, so be sure to check back often for new content!
             </p>
 
